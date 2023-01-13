@@ -36,8 +36,25 @@ I actually already installed VSCode before for CSE 11, but I remember the steps 
 9. Type this command into the terminal, replacing `zz` with your CSE15L account username: ` $ ssh cs15lwi23zz@ieng6.ucsd.edu`
 10. Select `yes` when the terminal asks you to verify your authenticity
 11. Enter your password and you should be connected!
->> I could not get through step 11, even though I reset my password twice and waited for 15+ minutes each time for the password to take effect. I kept getting this error:
+![image](https://user-images.githubusercontent.com/86854157/212259074-bc4ba714-71c2-4c47-86a1-3a070cd373ce.png)
+
+>> I could not get through step 11 during the lab, even though I reset my password twice and waited for 15+ minutes each time for the password to take effect. I kept getting this error:
 >> ![image](https://user-images.githubusercontent.com/86854157/212216927-b49dff72-e97d-49c9-8136-564995e2d3d7.png)
->> Unfortunately, this means I wasn't able to complete Step 3 of the lab report (Part 5 on the weekly lab tasks)
+>> After a few hours, I tried it again. The system let me in after I refreshed my VSCode.
 
 # Trying Some Commands
+After connecting remotely to the CSE basement computer, there are many commands to try.
+* `ls --help` - lists information about commands that can be used
+![image](https://user-images.githubusercontent.com/86854157/212261007-45578841-5c2e-4d2a-93a8-7938eec35fc4.png)
+* `ls` - lists the files in a directory
+* `cd` - changes the directory
+* `cd ~` - returns to the home directory
+![image](https://user-images.githubusercontent.com/86854157/212261943-78543adb-4aad-49fa-9bad-c680e1f3e3f8.png)
+* `cat /(location of the file)` - prints the content of a file
+![image](https://user-images.githubusercontent.com/86854157/212262269-926df065-f86e-4c71-95e4-6d00114e4d74.png)
+* `pwd` - prints the working directory
+![image](https://user-images.githubusercontent.com/86854157/212263317-eb8408cd-c350-4cc3-94d7-b314581f6eae.png)
+* `mkdir` - make a new directory
+* `cp` - copies a directory
+* `Ctrl-D` - exists the remote server
+![image](https://user-images.githubusercontent.com/86854157/212263376-e265441d-b264-4cfd-9ba6-14aeec9095aa.png)
