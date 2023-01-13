@@ -15,13 +15,15 @@
 1. Get a pot
 2. Chop up onion and garlic
 3. Saute
-4. Watch Youtube [Link](https://www.youtube.com/) as you wait
+4. Watch [Youtube](https://www.youtube.com/) as you wait
 5. Throw in mashed tomato
 6. Add water
 7. Boil
 8. Drink
-`enjoy this delicious soup`
+---
+`enjoy`
 ```
-supplement your education
-with good soup
+this
+delicious
+soup
 ```
