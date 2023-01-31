@@ -56,15 +56,6 @@ Lastly, I entered a random string after the original url, which ended up being `
 
 # Part 2: Bugs  🐛🐛🐛
 In [Lab 3](https://ucsd-cse15l-w23.github.io/week/week3/), we were given buggy files to study. Using tests to determine their outputs, we could then fix the bug. The code I'll be discussing is from the `ArrayExamples` class, specifically the `reversed()` function. 
-```
-  static int[] reversed(int[] arr) {
-    int[] newArray = new int[arr.length];
-    for(int i = 0; i < arr.length; i += 1) {
-      arr[i] = newArray[arr.length - i - 1];
-    }
-    return arr;
-```
-
 **Failure-Inducing Input:**
 Upon entering the array `{6, 5, 4}`, I received an error at `element 0`. Supposedly, the first element in the array should have become `4`, but it was `0` instead.
 ```
@@ -86,9 +77,27 @@ Upon entering the array `{0}`, I received `{0}`, which is the expected value.
 **Symptom:**
 ![image](https://user-images.githubusercontent.com/86854157/215669941-8a03935a-4e04-440b-b2c8-b208e7e7ff2a.png)
 ![image](https://user-images.githubusercontent.com/86854157/215670074-a5303961-d2a0-4250-8eb4-9739db668d05.png)
-
-
+> The second input didn't induce a failure so there are no symptoms.
 **Bug:**
+Before:
+```
+  static int[] reversed(int[] arr) {
+    int[] newArray = new int[arr.length];
+    for(int i = 0; i < arr.length; i += 1) {
+      arr[i] = newArray[arr.length - i - 1];
+    }
+    return arr;
+```
+After:
+```
+  static int[] reversed(int[] arr) {
+    int[] newArray = new int[arr.length];
+    for(int i = 0; i < arr.length; i += 1) {
+      newArray[i] = arr[arr.length - i - 1];
+    }
+    return newArray;
+```
+The cause of the bug is that `arr`, which is the old array, was copying into `newArray`, or my supposed output. Since `newArray` is empty, this causes `arr` to become completely empty, while `newArray` is not changed at all. Since I end up returning `arr`, I just end up returning an empty array of all 0's. To fix this, I changed all the instances of `newArray` into `arr`, and vice versa.
 
 # Part 3: New Discoveries 🔎
 Before Lab 2, I didn't much about servers, including what they were, how they worked, and what inputs they took in. When I studied `NumberServer.java`, I realized that url's belong to a type called `URI`, and they include a path that tells the program what to do. Depending on what path the user enters into the search bar, the program will do something different, which can be anything from incrementing a number to printing out a picture. 
