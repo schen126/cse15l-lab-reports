@@ -13,6 +13,11 @@ As I was working on a new computer that did not have GitHub Desktop installed, I
 4. Following that, open the repo in Visual Studio Code ([download instructions](https://github.com/schen126/cse15l-lab-reports/blob/main/lab_report_1.md) in Lab Report 1)
 > After making changes to the code locally, make sure to `push` the change so the main version (on GitHub) will be modified
 
+![image](https://user-images.githubusercontent.com/86854157/215659099-9f270f17-fdd1-4d00-b680-3866c2997ac1.png)
+![image](https://user-images.githubusercontent.com/86854157/215659139-a2947147-c40f-49f0-b6bd-6825ccaacbc9.png)
+![image](https://user-images.githubusercontent.com/86854157/215659180-2ca28a52-c11f-4437-a41f-ba2d0fc73fda.png)
+![image](https://user-images.githubusercontent.com/86854157/215659274-31717b9d-6d48-4edd-be8e-f1667fc98253.png)
+
 ![image](https://user-images.githubusercontent.com/86854157/215658365-1cb2a095-c7f9-4f2e-8bc1-32226499d756.png)
 ![image](https://user-images.githubusercontent.com/86854157/215658448-2cd5223e-13d3-4b27-a0a7-a743cc87973d.png)
 ![image](https://user-images.githubusercontent.com/86854157/215658497-47016698-77aa-457c-b4ac-288f356799eb.png)
