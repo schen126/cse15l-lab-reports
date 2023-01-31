@@ -38,9 +38,11 @@ The main features are:
 * If the user enters the `/add-message` path, the program will check if it is followed by `s`. If it is, the string entered by the user will be concatenated to `messages`
 After coding the server, I ran the server using `javac Server.java StringServer.java` and `java StringServer 4001`. Upon starting the server and opening the link, I was given a blank page (meaning my `messages` variable is empty, as expected):
 <br /><img src="https://user-images.githubusercontent.com/86854157/215659099-9f270f17-fdd1-4d00-b680-3866c2997ac1.png" width="400">
+
 **Methods Used:** 
 * `main`: The program checks for a port number. If one exists, a new `Handler` is created, and `handleRequest` is called.
 * `handleRequest`: The URL is passed into `handleRequest`, which parses the url and returns a String for the website to print out
+
 **Arguments:**
 * `main` takes in `String[] args`, which is passed to the program from the Terminal from the user. `args[0]` should be the port number, which is `4001` in my case
 * `handleRequest` takes `URI url`. In my case, it's `http://localhost:4001`
@@ -77,6 +79,7 @@ Upon entering the array `{0}`, I received `{0}`, which is the expected value.
   }
   
  ```
+ 
 **Symptoms:**
 ![image](https://user-images.githubusercontent.com/86854157/215669941-8a03935a-4e04-440b-b2c8-b208e7e7ff2a.png)
 ![image](https://user-images.githubusercontent.com/86854157/215670074-a5303961-d2a0-4250-8eb4-9739db668d05.png)
