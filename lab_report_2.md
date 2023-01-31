@@ -1,4 +1,4 @@
-## Lab Report 1
+## Lab Report 2
 *By Serena Chen*
 
 ---
@@ -17,6 +17,22 @@ As I was working on a new computer that did not have GitHub Desktop installed, I
 ![image](https://user-images.githubusercontent.com/86854157/215658448-2cd5223e-13d3-4b27-a0a7-a743cc87973d.png)
 ![image](https://user-images.githubusercontent.com/86854157/215658497-47016698-77aa-457c-b4ac-288f356799eb.png)
 ![image](https://user-images.githubusercontent.com/86854157/215658539-85322495-9250-41e4-bdad-66b5c7afc8c5.png)
+![image](https://user-images.githubusercontent.com/86854157/215658770-46cf8116-9eda-4678-aa26-89e7d5350151.png)
+
+public String handleRequest(URI url) {
+        if (url.getPath().equals("/")) {
+            return messages;
+        } else {
+            if (url.getPath().contains("/add-message")) {
+                String[] parameters = url.getQuery().split("=");
+                if (parameters[0].equals("s")) {
+                    messages += "\n" + parameters[1];
+                    return messages;
+                }
+            }
+            return "404 Not Found!";
+        }
+    }
 
 
 # Part 2: Bugs  🐛🐛🐛
