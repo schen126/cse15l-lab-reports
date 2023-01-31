@@ -3,7 +3,7 @@
 
 ---
 # Part 1: StringServer 🧶🖥️
-I started by copying the [code](https://github.com/ucsd-cse15l-f22/wavelet) provided by Professor Politz during Lab 2 into a new repo so I could edit it, which included the code for [`Server.java`](https://github.com/ucsd-cse15l-f22/wavelet/blob/master/Server.java) and [`NumberServer.java`](https://github.com/ucsd-cse15l-f22/wavelet/blob/master/NumberServer.java). The former would build a web server using HttpServer, and the latter would actually handle URL requests. I copied and used `Server.java` as is, but renamed and edited `NumberServer.java` to `StringServer.java` to handle Strings instead of numbers.
+I started by copying the [code](https://github.com/ucsd-cse15l-f22/wavelet) provided by Professor Politz during [Lab 2](https://ucsd-cse15l-w23.github.io/week/week2/) into a new repo so I could edit it, which included the code for [`Server.java`](https://github.com/ucsd-cse15l-f22/wavelet/blob/master/Server.java) and [`NumberServer.java`](https://github.com/ucsd-cse15l-f22/wavelet/blob/master/NumberServer.java). The former would build a web server using HttpServer, and the latter would actually handle URL requests. I copied and used `Server.java` as is, but renamed and edited `NumberServer.java` to `StringServer.java` to handle Strings instead of numbers.
 As I was working on a new computer that did not have GitHub Desktop installed, I followed the following steps:
 1. Go to [GitHub's website](https://desktop.github.com/) and download the `.exe` file to install the app
 <br /> <p align="center"> <img src="https://user-images.githubusercontent.com/86854157/215649461-98bb374c-d6c9-456f-be49-f35e8dd47bdb.png" width="600"> </p>
@@ -55,7 +55,37 @@ Lastly, I entered a random string after the original url, which ended up being `
 <br /> <p align="center"> <img src="https://user-images.githubusercontent.com/86854157/215659274-31717b9d-6d48-4edd-be8e-f1667fc98253.png" width="400"> </p>
 
 # Part 2: Bugs  🐛🐛🐛
+In [Lab 3](https://ucsd-cse15l-w23.github.io/week/week3/), we were given buggy files to study. Using tests to determine their outputs, we could then fix the bug. The code I'll be discussing is from the `ArrayExamples` class, specifically the `reversed()` function. 
+```
+  static int[] reversed(int[] arr) {
+    int[] newArray = new int[arr.length];
+    for(int i = 0; i < arr.length; i += 1) {
+      arr[i] = newArray[arr.length - i - 1];
+    }
+    return arr;
+```
 
+**Failure-Inducing Input:**
+Upon entering the array `{6, 5, 4}`, I received an error at `element 0`. Supposedly, the first element in the array should have become `4`, but it was `0` instead.
+```
+  @Test
+  public void testReverseInPlace1() {
+    int[] input1 = {6, 5, 4};
+    assertArrayEquals(new int[]{4, 5, 6}, ArrayExamples.reversed(input1));
+  }
+ ```
+**Non-Failure-Inducing Input:**
+Upon entering the array `{0}`, I received `{0}`, which is the expected value.
+```
+  @Test
+  public void testReverseInPlace2() {
+    int[] input1 = {0};
+    assertArrayEquals(new int[]{0}, ArrayExamples.reversed(input1));
+  }
+ ```
+**Symptom:**
+
+**Bug:**
 
 # Part 3: New Discoveries 🔎
 Before Lab 2, I didn't much about servers, including what they were, how they worked, and what inputs they took in. When I studied `NumberServer.java`, I realized that url's belong to a type called `URI`, and they include a path that tells the program what to do. Depending on what path the user enters into the search bar, the program will do something different, which can be anything from incrementing a number to printing out a picture. 
