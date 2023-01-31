@@ -83,6 +83,7 @@ Upon entering the array `{0}`, I received `{0}`, which is the expected value.
 > The second input didn't induce a failure so there are no symptoms.
 
 **Bug:**
+
 Before:
 ```
   static int[] reversed(int[] arr) {
