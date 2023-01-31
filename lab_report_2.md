@@ -56,4 +56,7 @@ Lastly, I entered a random string after the original url, which ended up being `
 
 # Part 2: Bugs  🐛🐛🐛
 
+
 # Part 3: New Discoveries 🔎
+Before Lab 2, I didn't much about servers, including what they were, how they worked, and what inputs they took in. When I studied `NumberServer.java`, I realized that url's belong to a type called `URI`, and they include a path that tells the program what to do. Depending on what path the user enters into the search bar, the program will do something different, which can be anything from incrementing a number to printing out a picture. 
+After completing the lab assignment, I can make my own server and even customize the paths it would use to execute commands. This would allow me to create my own servers if I ever wanted to make an online resume or Zoom meeting tracker, which I think is super fascinating. Though I'd have to study more on how to format a web server in a more aesthetic way, the possibilities are endless!
