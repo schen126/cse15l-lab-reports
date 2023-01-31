@@ -84,6 +84,9 @@ Upon entering the array `{0}`, I received `{0}`, which is the expected value.
   }
  ```
 **Symptom:**
+![image](https://user-images.githubusercontent.com/86854157/215669941-8a03935a-4e04-440b-b2c8-b208e7e7ff2a.png)
+![image](https://user-images.githubusercontent.com/86854157/215670074-a5303961-d2a0-4250-8eb4-9739db668d05.png)
+
 
 **Bug:**
 
