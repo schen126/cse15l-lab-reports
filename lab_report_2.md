@@ -43,7 +43,7 @@ After coding the server, I ran the server using `javac Server.java StringServer.
 <br /><img src="https://user-images.githubusercontent.com/86854157/215659099-9f270f17-fdd1-4d00-b680-3866c2997ac1.png" width="400">
 
 **Methods Used:** 
-* `main`: The program checks for a port number. If one exists, a new `Handler` is created, and `handleRequest` is called.
+* `main`: The program checks for a port number. A port is the connection between a web server and a web client that helps info get transferred between them. If one exists, a new `Handler` is created, and `handleRequest` is called.
 * `handleRequest`: The URL is passed into `handleRequest`, which parses the url and returns a String for the website to print out
 
 **Arguments:**
@@ -52,10 +52,10 @@ After coding the server, I ran the server using `javac Server.java StringServer.
 > The same methods and arguments repeat for every case I use. However, their values change, which is what I will be detailing.
 
 In this first case, because `url`'s path is only a `/`, `messages` will return immediately. It is empty right now, so a blank screen will be shown.
-In the second case, I use the command `/add-message?s-hello`, which will concatenate `hello` to `messages` through the `handleRequest()` method. Therefore, since this String is returned soon after, the text `hello` will be printed onto the screen.
+In the second case, I use the path+query `/add-message?s-hello`, which will concatenate `hello` to `messages` through the `handleRequest()` method. Therefore, since this String is returned soon after, the text `hello` will be printed onto the screen.
 <br /><img src="https://user-images.githubusercontent.com/86854157/215659139-a2947147-c40f-49f0-b6bd-6825ccaacbc9.png" width="400">
 
-In the third case, I use the command `/add-message?s=1234`, which will concatenate `1234` to `messages`, which will then become `hello\n1234`. Even though `1234` is technically an integer, the program reads it in as a String, so it will be concatenated regardless.
+In the third case, I use the path+query `/add-message?s=1234`, which will concatenate `1234` to `messages`, which will then become `hello\n1234`. Even though `1234` is technically an integer, the program reads it in as a String, so it will be concatenated regardless.
 <br /><img src="https://user-images.githubusercontent.com/86854157/215659180-2ca28a52-c11f-4437-a41f-ba2d0fc73fda.png" width="400">
 
 Lastly, I entered a random string after the original url, which ended up being `http://localhost:4000/add`. Because `add` is not a keyword in this program, I received an error message. `messages` was not updated, so, theoretically, if I returned to `http://localhost:4000`, I should still see the message `hello\n1234`.
@@ -66,7 +66,7 @@ Lastly, I entered a random string after the original url, which ended up being `
 In [Lab 3](https://ucsd-cse15l-w23.github.io/week/week3/), we were given buggy files to study. Using tests to determine their outputs, we could then fix the bug. The code I'll be discussing is from the `ArrayExamples` class, specifically the `reversed()` function. 
 
 **Failure-Inducing Input:**
-Upon entering the array `{6, 5, 4}`, I received an error at `element 0`. Supposedly, the first element in the array should have become `4`, but it was `0` instead.
+Upon entering the array `{6, 5, 4}`, I received an error at `element 0`. Supposedly, the first element in the array should have become `4`, but it was `0` instead. The expected output is `{4, 5, 6}`, but the actual output was `{0, 0, 0}`.
 ```
   @Test
   public void testReverseInPlace1() {
@@ -111,7 +111,7 @@ After:
     }
     return newArray;
 ```
-The cause of the bug is that `arr`, which is the old array, was copying into `newArray`, or my supposed output. Since `newArray` is empty, this causes `arr` to become completely empty, while `newArray` is not changed at all. Since I end up returning `arr`, I just end up returning an empty array of all 0's. To fix this, I changed all the instances of `newArray` into `arr`, and vice versa.
+The cause of the bug is that `arr`, which is the old array, was copying into `newArray`, or my supposed output. By this, I mean that the elements in the newly created `newArray`, which are `{0, 0, 0}`, are being copied into `arr`. This causes `arr` to become `{0, 0, 0}` as well. `newArray` is not changed at all. Since I end up returning `arr`, I just end up returning an empty array of all 0's. To fix this, I changed all the instances of `newArray` into `arr`, and vice versa.
 
 # Part 3: New Discoveries 🔎
 Before Lab 2, I didn't know much about servers, including what they were, how they worked, and what inputs they took in. When I studied `NumberServer.java`, I realized that url's belong to a type called `URI`, and they include a path that tells the program what to do. Depending on what path the user enters into the search bar, the program will do something different, which can be anything from incrementing a number to printing out a picture. 
