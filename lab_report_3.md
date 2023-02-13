@@ -19,7 +19,7 @@ The syntax for `grep -i` is `$grep -i "[phrase]" [file]`
 The syntax for `grep -n` is `$ grep -n "[phrase]" [file]`
 
 # Command Variation 3: `^ and $`
-The special characters [`^` and `$`](https://www.geeksforgeeks.org/grep-command-in-unixlinux/) can be placed in the beginning and end, respectively, of a phrase to specify where the program should be looking for this pattern. `grep "^word" is used to match the lines that start with the given string, while `grep "word$"` is used to match the lines that end with the given strings. 
+The special characters [`^` and `$`](https://www.geeksforgeeks.org/grep-command-in-unixlinux/) can be placed in the beginning and end, respectively, of a phrase to specify where the program should be looking for this pattern. `grep "^word"` is used to match the lines that start with the given string, while `grep "word$"` is used to match the lines that end with the given strings. 
 The syntaxes are:
 * `$grep "^[phrase]" [file]`
 * `$grep "[phrase]$" [file]`
