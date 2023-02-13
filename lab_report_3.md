@@ -7,7 +7,7 @@ For my lab report, I'll be talking about the `grep` command. According to [Geeks
 ![image](https://user-images.githubusercontent.com/86854157/218420441-7cb1785a-967d-4f52-af2e-30105e4ae500.png)
 
 To use `grep`, the correct syntax is `grep [options] pattern [files]`.
->> Beyond adding the sources I use as hyperlinks within my lab report, I'll also compile a short [bibliography](https://github.com/schen126/cse15l-lab-reports/blob/main/lab_report_3.md#bibliography) at the end so it's easier for me to track my sources.
+>> Beyond adding the sources I use as hyperlinks within my lab report, I'll also compile a short [bibliography](https://github.com/schen126/cse15l-lab-reports/blob/main/lab_report_3.md#sources) at the end so it's easier for me to track my sources.
 >> Also, I will use `[brackets]` to indicate that this blank should be filled in with the corresponding word, command line, or other variable. 
 
 # Command Variation 1: `-i`
@@ -28,6 +28,6 @@ The syntaxes are:
 [This command](https://www.geeksforgeeks.org/grep-command-in-unixlinux/) will print the searched line and `n` lines after the result. For example, looking for `grep -A3 "Hello World!' somefile.txt` would print out each occurence of "Hello World!" in `somefile.txt`, each of which would be followed by the three lines after the line in which the phrase was found.
 The syntax is: `$grep -A[number of lines n] [phrase] [file]`
 
-# Bibliography
+# Sources
 * [GeeksForGeeks - Grep Command in Unix/Linux](https://www.geeksforgeeks.org/grep-command-in-unixlinux/)
 * [OpenAI - ChatGPT](https://openai.com/blog/chatgpt/)
