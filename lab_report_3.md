@@ -68,7 +68,7 @@ Using `grep -n`, I can see the line number where `grep` found each occurence of 
 
 I can see that the phrase "pyramid" occurs twice, once in line 21, and once in line 29. 
 
-# Command Variation 3: 
+# Command Variation 3: `-v`
 ["grep -v"](https://www.geeksforgeeks.org/grep-command-in-unixlinux/) allows the user to search for lines that don't contain a specific string.
 The syntax is `$ grep -v "[phrase]" [file]`
 
