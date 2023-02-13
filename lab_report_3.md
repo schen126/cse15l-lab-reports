@@ -121,7 +121,7 @@ The syntax is `$ grep -v "[phrase]" [file]`
         Kong.
         economic zone.
 ```
-Using `grep -v`, I can get every line from the file `WhereToHongKong.txt` that does not contain "a." As you can see, this mostly consists of lines with very few letters.
+Using `grep -v`, I can get every line from the file `WhereToHongKong.txt` that does not contain "a." As you can see, this mostly consists of lines with very few words.
 
 **Example 2**
 ```
