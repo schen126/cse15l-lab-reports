@@ -3,7 +3,9 @@
 
 ---
 For my lab report, I'll be talking about the `grep` command. According to [GeeksForGeeks](https://www.geeksforgeeks.org/grep-command-in-unixlinux/), `grep` stands for "**g**lobal search for **r**egular **e**xpression and print out. It allows the user to search for a pattern in files, then display the results. And according to [ChatGPT](https://chat.openai.com/chat), the "powerful command-line utility" can be modified in many ways to change its behavior.
+
 ![image](https://user-images.githubusercontent.com/86854157/218420441-7cb1785a-967d-4f52-af2e-30105e4ae500.png)
+
 To use `grep`, the correct syntax is `grep [options] pattern [files]`.
 >> Beyond adding the sources I use as hyperlinks within my lab report, I'll also compile a short bibliography at the end so it's easier for me to track my sources.
 >> Also, I will use `[brackets]` to indicate that this blank should be filled in with the corresponding word, command line, or other variable. 
