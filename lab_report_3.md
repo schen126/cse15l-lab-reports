@@ -11,22 +11,22 @@ To use `grep`, the correct syntax is `grep [options] pattern [files]`.
 >> Also, I will use `[brackets]` to indicate that this blank should be filled in with the corresponding word, command line, or other variable. 
 
 # Command Variation 1: `-i`
-`grep-i` allows the user to search for a string in a case-insensitive fashion. Therefore, searching in a file with a string like "cats" could return "cAts," "CATS", "caTS," or any other variation of the same word.
+[`grep-i`](https://www.geeksforgeeks.org/grep-command-in-unixlinux/) allows the user to search for a string in a case-insensitive fashion. Therefore, searching in a file with a string like "cats" could return "cAts," "CATS", "caTS," or any other variation of the same word.
 The syntax for `grep -i` is `$grep -i "[phrase]" [file]`
 
 # Command Variation 2: `-n`
-`grep-n` allows the user to search within a file for a certain phrase, then show the line number of the file in addition to the line matched. This is useful if you're searching for a word in a huge text file, and need to know exactly where to scroll to, to find the line. 
+[`grep-n`](https://www.geeksforgeeks.org/grep-command-in-unixlinux/) allows the user to search within a file for a certain phrase, then show the line number of the file in addition to the line matched. This is useful if you're searching for a word in a huge text file, and need to know exactly where to scroll to, to find the line. 
 The syntax for `grep -n` is `$ grep -n "[phrase]" [file]`
 
 # Command Variation 3: `^ and $`
-The special characters `^` and `$` can be placed in the beginning and end, respectively, of a phrase to specify where the program should be looking for this pattern. `grep "^word" is used to match the lines that start with the given string, while `grep "word$"` is used to match the lines that end with the given strings. 
+The special characters [`^` and `$`](https://www.geeksforgeeks.org/grep-command-in-unixlinux/) can be placed in the beginning and end, respectively, of a phrase to specify where the program should be looking for this pattern. `grep "^word" is used to match the lines that start with the given string, while `grep "word$"` is used to match the lines that end with the given strings. 
 The syntaxes are:
 * `$grep "^[phrase]" [file]`
 * `$grep "[phrase]$" [file]`
 
 # Command Variation 4: `-A n`
-This command will print the searched line and `n` lines after the result. For example, looking for `grep -A3 "Hello World!' somefile.txt` would print out each occurence of "Hello World!" in `somefile.txt`, each of which would be followed by the three lines after the line in which the phrase was found.
-The syntax is: `$grep -A[number of lines n] [phrase] [file]
+[This command](https://www.geeksforgeeks.org/grep-command-in-unixlinux/) will print the searched line and `n` lines after the result. For example, looking for `grep -A3 "Hello World!' somefile.txt` would print out each occurence of "Hello World!" in `somefile.txt`, each of which would be followed by the three lines after the line in which the phrase was found.
+The syntax is: `$grep -A[number of lines n] [phrase] [file]`
 
 # Bibliography
 * [GeeksForGeeks - Grep Command in Unix/Linux](https://www.geeksforgeeks.org/grep-command-in-unixlinux/)
