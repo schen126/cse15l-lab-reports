@@ -3,6 +3,7 @@
 
 ---
 **Setup**
+
 1) Delete existing forks of the repository on your account
 ![image](https://user-images.githubusercontent.com/86854157/221533090-e1bbb7d1-1d7c-4aee-8ab1-32783f5be427.png)
 
@@ -11,6 +12,7 @@
 2) Fork the repository
 
 3) Start the timer
+
 
 
 **Numbered Steps**
