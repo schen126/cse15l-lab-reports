@@ -9,6 +9,7 @@
 >> Use `rm -r [file name]` to delete the repository
 
 2) Fork the repository
+
 3) Start the timer
 
 
