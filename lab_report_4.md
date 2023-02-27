@@ -7,8 +7,10 @@
 ![image](https://user-images.githubusercontent.com/86854157/221533090-e1bbb7d1-1d7c-4aee-8ab1-32783f5be427.png)
 
 Use `rm -r [file name]` to delete the repository
-3. Fork the repository
-5. Start the timer
+
+2. Fork the repository
+
+3. Start the timer
 
 
 **Numbered Steps**
