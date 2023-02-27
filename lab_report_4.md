@@ -4,11 +4,12 @@
 ---
 **Setup**
 1. Delete existing forks of the repository on your account
-* Use `rm -r [file name]` to delete the repository
+Use `rm -r [file name]` to delete the repository
 3. Fork the repository
 5. Start the timer
 
 **Numbered Steps**
+
 4. Log into `ieng6`
 `ssh cs15lwi23username@ieng6.ucsd.edu`
 `<enter>`
