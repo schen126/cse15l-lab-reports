@@ -2,7 +2,7 @@
 *By Serena Chen*
 
 ---
-My favorite lab report was `Lab Report 3`, which correlates to the lab in Week 4 (the document for our group can be found [here](https://docs.google.com/document/d/1W8dxYHgvIFSqXOY1R09R4HYT-B3YAbPKHE-gGwP9d4s/edit#heading=h.doiztlgw6k3t)). This [lab report](https://schen126.github.io/cse15l-lab-reports/lab_report_3.html) focused on the `grep` command, which is a powerful tool that allows the user to search for a pattern in files. Because of its many variations, I found it fascinating and very useful. In the [lab of week 4](https://ucsd-cse15l-w23.github.io/week/week4/), we looked for files in a directory using `grep`, and put this info into a script. I didn't complete the last section of the lab, which involved the Search Server. To expand upon `Lab Report 3` and the lab in week 4, I'll first explore more commands with `grep`, then describe and review the process of the lab, then complete the Search Server section of the lab.
+My favorite lab report was `Lab Report 3`, which correlates to the lab in Week 4 (the document for our group can be found [here](https://docs.google.com/document/d/1W8dxYHgvIFSqXOY1R09R4HYT-B3YAbPKHE-gGwP9d4s/edit#heading=h.doiztlgw6k3t)). This [lab report](https://schen126.github.io/cse15l-lab-reports/lab_report_3.html) focused on the `grep` command, which is a powerful tool that allows the user to search for a pattern in files. Because of its many variations, I found it fascinating and very useful. In the [lab of week 4](https://ucsd-cse15l-w23.github.io/week/week4/), we looked for files in a directory using `grep`, and put this info into a script. To expand upon `Lab Report 3` and the lab in week 4, I'll first explore more commands with `grep`, then describe and review the process of the lab.
 
 ## Exploring More `grep` Commands [🕵️](https://www.geeksforgeeks.org/grep-command-in-unixlinux/)
 ### `grep -w`
@@ -79,6 +79,15 @@ Deciding where to go will depend on the time available and your physical conditi
 ![image](https://user-images.githubusercontent.com/86854157/224889292-04761219-0d25-4a0b-8fd9-92f02a325133.png)
 `grep` prints out the file that each line is included in, and `grep -h` prints out the lines but without the file name in the front.
 
-## Week 4 Lab: How to Analyze a Text File 🗎
-
-## Creating a Search Server 🖥️
+## Week 4 Lab: How to Analyze a Text File [🗎](https://ucsd-cse15l-w23.github.io/week/week4/)
+During this lab, we use command-line tools to search through directories with text files. To test these commands, I'll be using the same source as the lab, which is a [sample of writing in English from the OANC](https://anc.org/data/oanc/download/). 
+First, we tried the command `find written_2/`, which allowed us to find files within a directory with the same name.
+INSERT PIC
+Then, we learned the `>` command, which allows us to redirect output. By using it in `find written_2/ > find-results.txt`, we were able to redirect the output of `find written_2`, which includes all the files in the folder, into a text file called `find-results.txt`.
+INSERT PIC
+Using the command `less`, we can print out fewer files at the same time with `find`. By scrolling with up and down arrows, and pressing `q` to quit, we can treat the output like a digital book to flip through. Below is the result of `less find-results.txt`:
+INSERT PIC
+`wc` allows us to count the number of words in a file. Using `wc find-results.txt`, we can see how many words are in this file. 
+INSERT PIC
+However, when searching for files with `find written_2/`, it doesn't just include addresses to `.txt` files, but addresses to the directories that these .txt files are contained in. An alternative is using `grep ".txt" find-results.txt`, which will specifically find lines ending in `.txt` within `find-results.txt`. By redirecting the output into a file using `grep ".txt" find-results.txt > grep-results.txt`, then doing `wc grep-results.txt`, we can see how many `.txt` files there actually are in the directory.
+INSERT PIC
