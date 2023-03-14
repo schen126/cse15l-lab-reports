@@ -4,8 +4,8 @@
 ---
 My favorite lab report was `Lab Report 3`, which correlates to the lab in Week 4 (the document for our group can be found [here](https://docs.google.com/document/d/1W8dxYHgvIFSqXOY1R09R4HYT-B3YAbPKHE-gGwP9d4s/edit#heading=h.doiztlgw6k3t)). This [lab report](https://schen126.github.io/cse15l-lab-reports/lab_report_3.html) focused on the `grep` command, which is a powerful tool that allows the user to search for a pattern in files. Because of its many variations, I found it fascinating and very useful. In the [lab of week 4](https://ucsd-cse15l-w23.github.io/week/week4/), we looked for files in a directory using `grep`, and put this info into a script. I didn't complete the last section of the lab, which involved the Search Server. To expand upon `Lab Report 3` and the lab in week 4, I'll first explore more commands with `grep`, then describe and review the process of the lab, then complete the Search Server section of the lab.
 
-# Exploring More `grep` Commands [🕵️](https://www.geeksforgeeks.org/grep-command-in-unixlinux/)
-## `grep -w`
+## Exploring More `grep` Commands [🕵️](https://www.geeksforgeeks.org/grep-command-in-unixlinux/)
+### `grep -w`
 This command matches only the whole words, not substrings. The syntax for `grep -w` is `$grep -w "[string]" [file name]`
 
 **Example:**
@@ -21,7 +21,7 @@ To make the most of your trip you’ll need to tune your mind to “Bahamian tim
 ![image](https://user-images.githubusercontent.com/86854157/224887532-18819726-0a61-432b-ac29-f50b246fe301.png)
 When using just `grep`, words like "homeland" will be printed out as well if we search for the word "home". However, when using `grep -w`, only lines containing the word "home" will be printed.
 
-## `grep -o`
+### `grep -o`
 This command prints only the matched string, not the entire line as is the default of `grep`. The syntax for `grep -o` is `$grep -o "[string]" [file name]`
 
 **Example:**
@@ -38,7 +38,7 @@ place
 ![image](https://user-images.githubusercontent.com/86854157/224888267-51d081aa-23bf-447b-8b8b-35d8f6a52260.png)
 When using `grep`, the entire line containing the word "place" is printed. However, by using `grep -o`, only the words containing "place" will be printed, which is three occurences. 
 
-## `grep -l`
+### `grep -l`
 This command displays the files that contain the string/pattern. The syntax for `grep -l` is `$grep -l "[string]" [files or directory you wish to search through]`
 
 **Example:**
@@ -58,7 +58,7 @@ China-WhereToGo.txt
 ![image](https://user-images.githubusercontent.com/86854157/224888994-997ca61a-7dc4-411d-ba0b-23c134d0b55c.png)
 Using `grep` prints out all the lines with the word "purple", while `grep -l` prints out the file names of the files containing the word "purple".
 
-## `grep -h`
+### `grep -h`
 This command displays the matched lines but not the file names. The syntax for `grep -h` is `$grep -h "[string]" [file name]`
 
 **Example:**
@@ -79,6 +79,6 @@ Deciding where to go will depend on the time available and your physical conditi
 ![image](https://user-images.githubusercontent.com/86854157/224889292-04761219-0d25-4a0b-8fd9-92f02a325133.png)
 `grep` prints out the file that each line is included in, and `grep -h` prints out the lines but without the file name in the front.
 
-# Week 4 Lab: How to Analyze a Text File 🗎
+## Week 4 Lab: How to Analyze a Text File 🗎
 
-# Creating a Search Server 🖥️
+## Creating a Search Server 🖥️
