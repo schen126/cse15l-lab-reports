@@ -82,12 +82,18 @@ Deciding where to go will depend on the time available and your physical conditi
 ## Week 4 Lab: How to Analyze a Text File [🗎](https://ucsd-cse15l-w23.github.io/week/week4/)
 During this lab, we use command-line tools to search through directories with text files. To test these commands, I'll be using the same source as the lab, which is a [sample of writing in English from the OANC](https://anc.org/data/oanc/download/). 
 First, we tried the command `find written_2/`, which allowed us to find files within a directory with the same name.
-INSERT PIC
+![image](https://user-images.githubusercontent.com/86854157/224893065-9200e6e3-2464-484e-afc3-4d024905c182.png)
+
 Then, we learned the `>` command, which allows us to redirect output. By using it in `find written_2/ > find-results.txt`, we were able to redirect the output of `find written_2`, which includes all the files in the folder, into a text file called `find-results.txt`.
-INSERT PIC
-Using the command `less`, we can print out fewer files at the same time with `find`. By scrolling with up and down arrows, and pressing `q` to quit, we can treat the output like a digital book to flip through. Below is the result of `less find-results.txt`:
-INSERT PIC
+![image](https://user-images.githubusercontent.com/86854157/224893099-41fc6a15-29d4-49f8-bcc5-e0603e4512da.png)
+
+Using the command `less`, we can print out fewer files at the same time with `find`. By scrolling with up and down arrows, and pressing `q` to quit, we can treat the output like a digital book to flip through. One usage example is `less find-results.txt`.
+
 `wc` allows us to count the number of words in a file. Using `wc find-results.txt`, we can see how many words are in this file. 
-INSERT PIC
+![image](https://user-images.githubusercontent.com/86854157/224893292-d7ca0b99-6677-48ae-9667-8c8ffb569447.png)
+
 However, when searching for files with `find written_2/`, it doesn't just include addresses to `.txt` files, but addresses to the directories that these .txt files are contained in. An alternative is using `grep ".txt" find-results.txt`, which will specifically find lines ending in `.txt` within `find-results.txt`. By redirecting the output into a file using `grep ".txt" find-results.txt > grep-results.txt`, then doing `wc grep-results.txt`, we can see how many `.txt` files there actually are in the directory.
-INSERT PIC
+![image](https://user-images.githubusercontent.com/86854157/224893379-657e7dd0-e73d-43fa-9a9f-03c891bd8c77.png)
+
+Then, to make this process easier to complete, we can put this information into a script. A [script](https://ryanstutorials.net/bash-scripting-tutorial/bash-script.php) is a list of commands in a `.sh` file that will be executed one after the other. Here's my example:
+![image](https://user-images.githubusercontent.com/86854157/224894573-93cdee73-487e-4d8e-bb0f-078ea0aac659.png)
